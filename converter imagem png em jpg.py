@@ -23,5 +23,6 @@ for diretorio, subpastas, arquivos in os.walk(pasta):
                 image = image.convert('RGB')
 
             image.save(arquivo[:-3] + 'jpg', quality=95)
+            os.remove(arquivo)
             i+=1
             bar.update(i)
